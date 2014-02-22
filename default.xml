@@ -8,9 +8,9 @@
            remote="origin"
            sync-j="4" />
 
-  <project path="bitbake" name="openembedded/bitbake" />
-  <project path="openembedded-core" name="openembedded/oe-core" />
-  <project path="meta-openembedded" name="openembedded/meta-oe" />
-  <project path="meta-templates" name="bor-sh-oe/meta-templates"/>
+  <project path="bitbake" name="openembedded/bitbake" revision="bf9be2029b2bded5f532bdda4c38ae3dff5d1cf6" />
+  <project path="openembedded-core" name="openembedded/oe-core" revision="d3d5ccd3275196fb9e4cb8f49d3c087b97c20ed6" />
+  <project path="meta-openembedded" name="openembedded/meta-oe" revision="2a463dddcf76d7fa437e96f6cf0210143e97a904" />
+  <project path="meta-templates" name="bor-sh-oe/meta-templates" revision="7418743effaed627f0c3323e256f1102ef7b998d"/>
   <project path="meta-ros" name="bmwcarit/meta-ros" />
 </manifest>
