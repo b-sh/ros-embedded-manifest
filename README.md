@@ -10,8 +10,10 @@ It handles multiple yocto or openembedded layers git repositories.
 
 # Install Repo
 
+```
 $ curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 $ chmod a+x ~/bin/repo
+```
 
 Put bin folder to PATH
 
@@ -21,7 +23,9 @@ More infos [Link](http://source.android.com/source/downloading.html)
 
 ## Openembedded
 
+```
 $ repo init -u git@github.com:b-sh/ros-embedded-manifest.git -m openembedded.xml
+```
 
 ## Yocto
 
