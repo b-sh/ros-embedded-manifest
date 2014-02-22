@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="origin"
+           fetch="https://github.com"
+           />
+  <default revision="refs/heads/master"
+           remote="origin"
+           sync-j="4" />
+
+  <project path="bitbake" name="openembedded/bitbake" />
+  <project path="openembedded-core" name="openembedded/oe-core" />
+  <project path="meta-openembedded" name="openembedded/meta-oe" />
+  <project path="meta-ros" name="bmwcarit/meta-ros" />
+</manifest>
