@@ -12,5 +12,5 @@
   <project path="openembedded-core" name="openembedded/oe-core" revision="395b90054eccddc1c9062a9a8657ed4482b7710a" />
   <project path="meta-openembedded" name="openembedded/meta-oe" revision="2a5dea2399e2be5e5d964eda7465dcaf4c2e152b" />
   <project path="meta-templates" name="bor-sh-oe/meta-templates" revision="7418743effaed627f0c3323e256f1102ef7b998d" />
-  <project path="meta-ros" name="bmwcarit/meta-ros" revision="refs/tags/v0.1rc1"/>
+  <project path="meta-ros" name="bmwcarit/meta-ros" revision="refs/tags/v0.1rc2"/>
 </manifest>
