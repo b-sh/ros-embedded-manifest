@@ -36,7 +36,7 @@ $ repo init -b refs/tags/bmwcarit-v0.1 -u git@github.com:b-sh/ros-embedded-manif
 #### Checkout master
 
 ```
-$ repo init -b bmwcarit-master -u git@github.com:b-sh/ros-embedded-manifest.git -m openembedded.xml
+$ repo init -b bmwcarit-develop -u git@github.com:b-sh/ros-embedded-manifest.git -m openembedded.xml
 ```
 
 ## Yocto
