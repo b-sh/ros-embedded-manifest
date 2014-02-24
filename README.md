@@ -25,18 +25,21 @@ More infos [Link](http://source.android.com/source/downloading.html)
 
 ```
 $ repo init -u https://github.com/b-sh/ros-embedded-manifest.git -m openembedded.xml
+§ repo sync
 ```
 
 ### BMWCarIT releases
 
 ```
 $ repo init -b refs/tags/bmwcarit-v0.1 -u https://github.com/b-sh/ros-embedded-manifest.git -m openembedded.xml
+$ repo sync
 ```
 
 #### Checkout master
 
 ```
 $ repo init -b bmwcarit-develop -u https://github.com/b-sh/ros-embedded-manifest.git -m openembedded.xml
+$ repo sync
 ```
 
 ## Yocto
