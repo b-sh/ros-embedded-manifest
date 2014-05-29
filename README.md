@@ -44,4 +44,69 @@ $ repo sync
 
 ## Yocto
 
-In progress
+```
+$ repo init -u https://github.com/b-sh/ros-embedded-manifest.git -m yoctoembedded.xml
+§ repo sync
+```
+
+### Using working state
+
+```
+$ repo init -u https://github.com/b-sh/ros-embedded-manifest.git -m yoctoembedded.xml -b bmwcarit-yocto
+§ repo sync
+```
+
+### Build
+
+```
+$ source poky/oe-init-build-env yocto
+```
+
+### Setup Config
+
+conf/bblayers.conf
+
+```
+BBLAYERS ?= " \
+  /home/ruth/RepoYocto/poky/meta \
+  /home/ruth/RepoYocto/poky/meta-yocto \
+  /home/ruth/RepoYocto/poky/meta-openembedded/meta-oe \
+  /home/ruth/RepoYocto/poky/meta-ros \
+  "
+```
+
+conf/local.conf
+
+Optional
+ 
+ * selecting machine (default qemux86)
+ * parallelism options
+ * ...
+
+### Run build
+
+```
+bitbake core-image-ros-roscore
+
+runqemu qemux86 core-image-ros-roscore
+```
+
+QEMU:
+
+```
+# before running roscore need some setup inside qemux86
+vi /etc/hosts
+# add
+127.0.0.1    qemux86
+# exit :wq
+
+# export flags
+export ROS_ROOT=/usr
+export ROS_MASTER_URI=http://localhost:11311
+export CMAKE_PREFIX_PATH=/usr
+touch /usr/.catkin
+
+# run
+roscore
+```
+
