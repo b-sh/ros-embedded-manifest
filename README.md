@@ -2,13 +2,17 @@
 
 It handles multiple yocto or openembedded layers git repositories.
 
+Work on: Ubuntu 12.04
+
 # Branching Draft
 
 1. master - holds the current development 
 2. develop_yocto or develop_oe- holds integration of new releases
 3. release_yocto or release_oe - holds release branch (temp)
 
-# Install Repo
+# Prerequisites
+
+## Install Repo
 
 ```
 $ curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
@@ -18,6 +22,12 @@ $ chmod a+x ~/bin/repo
 Put bin folder to PATH
 
 More infos [Link](http://source.android.com/source/downloading.html)
+
+## Packages
+
+```
+sudo apt-get install build-essential chrpath diffstat gawk git-core libsdl1.2-dev texinfo unzip wget xterm
+```
 
 # Repo init
 
