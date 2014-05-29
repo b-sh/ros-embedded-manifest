@@ -7,6 +7,7 @@
   <default remote="github" revision="refs/heads/master" sync-j="4"/>
   
   <project name="bmwcarit/meta-ros" path="poky/meta-ros" />
+  <project name="b-sh/meta-freescale-ros" path="poky/meta-freescale-ros"/>
   <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="refs/heads/daisy"/>
   <project name="poky" remote="yocto" revision="refs/heads/daisy"/>
 </manifest>
