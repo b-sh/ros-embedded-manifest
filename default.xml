@@ -9,4 +9,5 @@
   <project name="poky" remote="yocto" revision="refs/heads/daisy"/>
   <project name="bor-sh-oe/meta-templates" path="poky/meta-templates"/>
   <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="refs/heads/daisy"/>
+  <project name="Freescale/meta-fsl-arm" path="poky/meta-fsl-arm" revision="refs/heads/daisy"/>
 </manifest>
