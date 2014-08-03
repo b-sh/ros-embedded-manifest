@@ -12,6 +12,7 @@ install:
 before_script:
   - git config --global user.email "b-sh@gmx.net"
   - git config --global user.name "b-sh"
+  - git config --global color.ui true
   - mkdir ~/bin
   - curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
   - chmod a+x ~/bin/repo
