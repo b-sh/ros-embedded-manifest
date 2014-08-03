@@ -1,0 +1,20 @@
+# needs to be on all branches
+#branches:
+#  only:
+#    - yocto/daisy-freescale
+#    - yocto/daisy-ros
+language: c++
+before_install:
+  - sudo apt-get update
+
+install:
+  - sudo apt-get install build-essential curl chrpath diffstat gawk git-core libsdl1.2-dev texinfo unzip wget xterm gettext
+before_script:
+  - mkdir ~/bin
+  - curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+  - chmod a+x ~/bin/repo
+  - export PATH=~/bin:$PATH
+script:
+  - repo init -b yocto/daisy-freescale -u https://github.com/bor-sh/ros-embedded-manifest.git
+  - TEMPLATECONF=meta-templates/conf/freescale source poky/oe-init-build-env yocto-fslc
+  - bitbake core-image-base
