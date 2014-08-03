@@ -10,6 +10,8 @@ before_install:
 install:
   - sudo apt-get install build-essential curl chrpath diffstat gawk git-core libsdl1.2-dev texinfo unzip wget xterm gettext
 before_script:
+  - git config --global user.email "b-sh@gmx.net"
+  - git config --global user.name "b-sh"
   - mkdir ~/bin
   - curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
   - chmod a+x ~/bin/repo
