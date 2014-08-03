@@ -26,7 +26,7 @@ More infos [Link](http://source.android.com/source/downloading.html)
 ## Packages
 
 ```
-sudo apt-get install build-essential chrpath diffstat gawk git-core libsdl1.2-dev texinfo unzip wget xterm
+sudo apt-get install build-essential chrpath diffstat gawk git-core libsdl1.2-dev texinfo unzip wget xterm gettext
 ```
 
 # Repo init
