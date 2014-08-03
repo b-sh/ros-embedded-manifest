@@ -6,7 +6,7 @@
 
   <default remote="github" revision="refs/heads/master" sync-j="4"/>
 
-  <project name="poky" remote="yocto"/>
+  <project name="poky" remote="yocto" revision="refs/heads/daisy"/>
   <project name="bor-sh-oe/meta-templates" path="poky/meta-templates"/>
-  <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe"/>
+  <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="refs/heads/daisy"/>
 </manifest>
