@@ -6,9 +6,9 @@ Work on: Ubuntu 12.04
 
 # Branching Draft
 
-1. master - holds the current development 
-2. develop_yocto or develop_oe- holds integration of new releases
-3. release_yocto or release_oe - holds release branch (temp)
+1. master - holds the readme
+2. oe/branchname - holds openembedded development lines
+3. yocto/branchname - holds yocto development lines
 
 # Prerequisites
 
@@ -34,35 +34,35 @@ sudo apt-get install build-essential chrpath diffstat gawk git-core libsdl1.2-de
 ## Openembedded
 
 ```
-$ repo init -u https://github.com/b-sh/ros-embedded-manifest.git -m openembedded.xml
+$ repo init -b oe/master -u https://github.com/bor-sh/ros-embedded-manifest.git
 § repo sync
 ```
 
 ### BMWCarIT releases
 
 ```
-$ repo init -b refs/tags/bmwcarit-v0.1 -u https://github.com/b-sh/ros-embedded-manifest.git -m openembedded.xml
+$ repo init -b refs/tags/bmwcarit-v0.1 -u https://github.com/bor-sh/ros-embedded-manifest.git
 $ repo sync
 ```
 
-#### Checkout master
+#### Develop line
 
 ```
-$ repo init -b bmwcarit-develop -u https://github.com/b-sh/ros-embedded-manifest.git -m openembedded.xml
+$ repo init -b oe/bmwcarit -u https://github.com/b-sh/ros-embedded-manifest.git
 $ repo sync
 ```
 
 ## Yocto
 
 ```
-$ repo init -u https://github.com/b-sh/ros-embedded-manifest.git -m yoctoembedded.xml
+$ repo init -b yocto/master -u https://github.com/b-sh/ros-embedded-manifest.git
 § repo sync
 ```
 
-### Using working state
+### Using latest working state
 
 ```
-$ repo init -u https://github.com/b-sh/ros-embedded-manifest.git -m yoctoembedded.xml -b bmwcarit-yocto
+$ repo init -b yocto/bmwcarit-release -u https://github.com/b-sh/ros-embedded-manifest.git
 § repo sync
 ```
 
@@ -70,13 +70,16 @@ $ repo init -u https://github.com/b-sh/ros-embedded-manifest.git -m yoctoembedde
 
 ```
 # for ROS only
-$ TEMPLATECONF=meta-templates/conf/ros source poky/oe-init-build-env yocto
+TEMPLATECONF=meta-templates/conf/ros source poky/oe-init-build-env yocto
+bitbake core-image-ros-roscore
 
 # ROS + setup for imx35pdk
-$ TEMPLATECONF=meta-templates/conf source poky/oe-init-build-env yocto-fslc-ros
+TEMPLATECONF=meta-templates/conf source poky/oe-init-build-env yocto-fslc-ros
+bitbake core-image-ros-roscore
 
 # freescale only
-$ TEMPLATECONF=meta-templates/conf/freescale source poky/oe-init-build-env yocto-fslc
+TEMPLATECONF=meta-templates/conf/freescale source poky/oe-init-build-env yocto-fslc
+bitbake core-image-base
 ```
 
 Adjust bblayers.conf and local.conf if required.
@@ -87,17 +90,12 @@ Optional
  * parallelism options
  * ...
 
-### Run build
-
-```
-bitbake core-image-ros-roscore
-
-runqemu qemux86 core-image-ros-roscore
-```
+### Run ROS qemu build
 
 QEMU:
 
 ```
+runqemu qemux86 core-image-ros-roscore
 # before running roscore need some setup inside qemux86
 vi /etc/hosts
 # add
