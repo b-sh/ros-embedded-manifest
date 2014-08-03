@@ -12,4 +12,5 @@
   <project path="openembedded-core" name="openembedded/oe-core" />
   <project path="meta-openembedded" name="openembedded/meta-oe" />
   <project path="meta-templates" name="bor-sh-oe/meta-templates"/>
+  <project path="meta-ros" name="bmwcarit/meta-ros" />
 </manifest>
