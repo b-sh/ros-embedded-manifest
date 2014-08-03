@@ -4,6 +4,10 @@ It handles multiple yocto or openembedded layers git repositories.
 
 Work on: Ubuntu 12.04
 
+# Build status
+
+![Build Status](https://travis-ci.org/bor-sh/ros-embedded-manifest.svg)](https://travis-ci.org/bor-sh/ros-embedded-manifest)
+
 # Branching Draft
 
 1. master - holds the readme
