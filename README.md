@@ -70,10 +70,13 @@ $ repo init -u https://github.com/b-sh/ros-embedded-manifest.git -m yoctoembedde
 
 ```
 # for ROS only
-$ TEMPLATECONF=meta-freescale-ros/conf/ros source poky/oe-init-build-env yocto
+$ TEMPLATECONF=meta-templates/conf/ros source poky/oe-init-build-env yocto
 
 # ROS + setup for imx35pdk
-$ TEMPLATECONF=meta-freescale-ros/conf source poky/oe-init-build-env yocto-fslc-ros
+$ TEMPLATECONF=meta-templates/conf source poky/oe-init-build-env yocto-fslc-ros
+
+# freescale only
+$ TEMPLATECONF=meta-templates/conf/freescale source poky/oe-init-build-env yocto-fslc
 ```
 
 Adjust bblayers.conf and local.conf if required.
