@@ -18,7 +18,4 @@ before_script:
   - chmod a+x ~/bin/repo
   - export PATH=~/bin:$PATH
 script:
-  - repo init -b yocto/daisy-freescale -u https://github.com/bor-sh/ros-embedded-manifest.git
-  - repo sync
-  - TEMPLATECONF=meta-templates/conf/freescale source poky/oe-init-build-env yocto-fslc
-  - bitbake core-image-base > log.txt
+  - bash build.sh
