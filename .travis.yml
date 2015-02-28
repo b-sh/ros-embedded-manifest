@@ -17,4 +17,6 @@ before_script:
   - curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
   - chmod a+x ~/bin/repo
   - export PATH=~/bin:$PATH
-  - bash build.sh
+  # the build is to long for this timeout after 50 minutes and I guess not enough memory
+  script:
+    - bash build.sh
