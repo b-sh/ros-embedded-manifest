@@ -12,6 +12,7 @@ run_build() {
 	repo init -b yocto/daisy-freescale -u https://github.com/bor-sh/ros-embedded-manifest.git
 	repo sync
 	TEMPLATECONF=meta-templates/conf/freescale source poky/oe-init-build-env yocto-fslc
+	echo "Starting build"
 	bitbake core-image-base	> log.txt
 	ret=$?
 	kill $keep_alive_pid >/dev/null 2>&1
